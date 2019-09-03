@@ -1,1 +1,1 @@
-# FCC-Randomo-Quote-Machine
+This is a project for a FCC Frontend Libraries certification.
