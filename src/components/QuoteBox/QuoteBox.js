@@ -36,12 +36,12 @@ class QuoteBox extends Component {
     return (
       <div id="quotebox">
         
-        <div className="quote-text" style={{color: this.props.newColor}}>
+        <div className="quote-text" id="text" style={{color: this.props.newColor}}>
             <i className="fa fa-quote-left"></i>
-            <span>{quote}</span>
+            <span >{quote}</span>
           </div>
-        <div className="quote-author" style={{color: this.props.newColor}}>
-            <span id="test"> - Kanye West</span>  
+        <div className="quote-author" id="author" style={{color: this.props.newColor}}>
+          <span > - Kanye West</span>  
           </div>
         
         <div className="buttons" >
@@ -51,7 +51,7 @@ class QuoteBox extends Component {
             </div>
             <a id="tumblr-quote" href="?" style={{background: this.props.newColor}}><i className="fab fa-tumblr"></i></a>
           </div>
-            <button className="new-quote" 
+          <button className="new-quote" id="new-quote"
             onClick={this.props.onRequestQuotes}
             onChange={this.props.onRequestColor}
              style={{background: this.props.newColor}}>New Quote</button>
