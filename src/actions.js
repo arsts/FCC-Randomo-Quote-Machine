@@ -1,7 +1,8 @@
 import {
   REQUEST_QUOTES_PENDING,
   REQUEST_QUOTES_SUCCESS,
-  REQUEST_QUOTES_FAILED 
+  REQUEST_QUOTES_FAILED,
+  GENERATE_COLOR
 } from './constants';
 
 
@@ -12,3 +13,7 @@ export const requestQuotes = () => (dispatch) => {
   .then(data => dispatch({ type: REQUEST_QUOTES_SUCCESS, payload: data }))
   .catch(error => dispatch({ type: REQUEST_QUOTES_FAILED, payload: error }))
 }
+
+export const generateColor = () => ({
+  type: GENERATE_COLOR
+})

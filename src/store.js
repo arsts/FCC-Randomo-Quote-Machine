@@ -1,6 +1,6 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import {logger} from 'redux-logger';
-import {requestQuotesReducer} from './reducers';
+import {requestQuotesReducer, generateColorReducer} from './reducers';
 
-export const store = createStore(requestQuotesReducer, applyMiddleware(thunkMiddleware, logger));
+export const store = createStore(combineReducers({quotes: requestQuotesReducer, color: generateColorReducer}) , applyMiddleware(thunkMiddleware, logger));
