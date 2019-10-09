@@ -1,11 +1,71 @@
-body {
-  background-color: white;
-}
 
-.quotebox {
+#quotebox {
  background-color: #ffffff;
  color: black;
- width: 400px;
- height: 300px; 
+ width: 550px;
+ min-height: 300px; 
  border-radius: 1%;
+ padding: 40px 50px;
+ text-align: center;
+ font-weight: 500;
+ display: flex;
+ flex-direction: column;
+ 
 }
+
+.fa-quote-left {
+  margin-right: 11px;
+}
+
+.quote-text {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+  font-size: 1.25em;
+}
+
+.quote-author {
+  margin-top: 20px;
+  text-align: end;
+  font-weight: 400;
+  /* font-size: 0.75em; */
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: rgb(22, 160, 133); */
+}
+
+.social {
+  display: flex;
+}
+
+#tweet-quote, #tumblr-quote, .new-quote {
+  color: #ffffff;
+  background-color: #333;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  height: 38px;
+}
+
+.new-quote {
+  padding: 8px 18px 6px 18px;
+}
+
+
+#tweet-quote, #tumblr-quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  width: 40px;
+  font-size: 17px;
+  text-decoration: none
+
+
+}
+

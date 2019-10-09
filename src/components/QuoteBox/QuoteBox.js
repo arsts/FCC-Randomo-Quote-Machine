@@ -3,11 +3,14 @@ import {requestQuotes} from '../../actions';
 import './QuoteBox.css';
 import {connect} from 'react-redux';
 
+
 const mapStateToProps = (state) => {
  return {
    isPending: state.isPending,
    quotes: state.quotes,
-   error: state.error
+   error: state.error,
+   colors: state.colors,
+   color: function(){return this.colors[Math.floor(Math.random() * state.colors.length)]}
  }
 }
 
@@ -20,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
 
 class QuoteBox extends Component {
   componentDidMount() {
-    console.log(this.props.quotes);
+    // console.log(this.props.quotes);
     this.props.onRequestQuotes()
     
   }
@@ -28,17 +31,32 @@ class QuoteBox extends Component {
   
   render() {
     const {quote} = this.props.quotes;
+    let textColor = { color: this.props.color };
+    console.log(textColor);
+    
+    let backgroundColor = { backgroundColor: this.props.color };
+    
+    // console.log(this.props.color());
+    
     return (
-      <div className="quotebox">
-        <div>
-          <p>{quote}</p>
-          <i> - Kanye West</i>
-        </div>
-        <div className="buttons">
-          <i className="fa fa-quote-left"></i>
-          <a href="?">twitter</a>
-          <a href="?"></a>
-           <button className="newquote" onClick={this.props.onRequestQuotes}>New Quote</button>
+      <div id="quotebox">
+        
+        <div className="quote-text" style={textColor}>
+            <i className="fa fa-quote-left"></i>
+            <span>{quote}</span>
+          </div>
+        <div className="quote-author" style={textColor}>
+            <span id="test"> - Kanye West</span>  
+          </div>
+        
+        <div className="buttons" >
+          <div className="social">
+            <div className="tweet-quote-container">
+            <a id="tweet-quote" href="?" style={backgroundColor}><i className="fab fa-twitter"></i></a>  
+            </div>
+            <a id="tumblr-quote" href="?" style={backgroundColor}><i className="fab fa-tumblr"></i></a>
+          </div>
+           <button className="new-quote" onClick={this.props.onRequestQuotes} style={backgroundColor}>New Quote</button>
         </div>
       </div>
     );
