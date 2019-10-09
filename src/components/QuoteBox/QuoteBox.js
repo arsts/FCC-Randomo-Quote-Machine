@@ -23,14 +23,16 @@ const mapDispatchToProps = (dispatch) => {
 
 class QuoteBox extends Component {
   componentDidMount() {
-    // console.log(this.props.quotes);
+    
     this.props.onRequestQuotes()
     
   }
   
   render() {
     const {quote} = this.props.quotes;
-
+    document.body.style.background = this.props.newColor;
+    console.log(document.body.style.background);
+    
     return (
       <div id="quotebox">
         

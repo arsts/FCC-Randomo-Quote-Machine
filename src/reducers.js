@@ -1,8 +1,7 @@
 import {
   REQUEST_QUOTES_PENDING,
   REQUEST_QUOTES_SUCCESS,
-  REQUEST_QUOTES_FAILED,
-  GENERATE_COLOR
+  REQUEST_QUOTES_FAILED
 } from './constants';
 
 const initialState = {

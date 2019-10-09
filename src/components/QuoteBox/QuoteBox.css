@@ -1,16 +1,19 @@
+body {
+  transition: background-color 1s;  
+}
 
 #quotebox {
- background-color: #ffffff;
- color: black;
- width: 550px;
- min-height: 300px; 
- border-radius: 1%;
- padding: 40px 50px;
- text-align: center;
- font-weight: 500;
- display: flex;
- flex-direction: column;
- 
+  background-color: #ffffff;
+  color: black;
+  width: 550px;
+  min-height: 300px;
+  border-radius: 1%;
+  padding: 40px 50px;
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .fa-quote-left {
@@ -22,27 +25,32 @@
   flex-shrink: 1;
   flex-basis: 1;
   font-size: 1.25em;
+  transition: color 1s;
+  
 }
+
 
 .quote-author {
   margin-top: 20px;
   text-align: end;
   font-weight: 400;
-  /* font-size: 0.75em; */
+  transition: color 1s;
+  
 }
 
 .buttons {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
-  /* background-color: rgb(22, 160, 133); */
 }
 
 .social {
   display: flex;
 }
 
-#tweet-quote, #tumblr-quote, .new-quote {
+#tweet-quote,
+#tumblr-quote,
+.new-quote {
   color: #ffffff;
   background-color: #333;
   border: none;
@@ -50,6 +58,7 @@
   outline: none;
   cursor: pointer;
   height: 38px;
+  transition: background-color 1s;
 }
 
 .new-quote {
@@ -57,15 +66,15 @@
 }
 
 
-#tweet-quote, #tumblr-quote {
+#tweet-quote,
+#tumblr-quote {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 5px;
   width: 40px;
   font-size: 17px;
-  text-decoration: none
-
+  text-decoration: none;
+  
 
 }
-
